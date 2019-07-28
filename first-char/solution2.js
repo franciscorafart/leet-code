@@ -1,5 +1,5 @@
 let firstUniqChar = (s) => {
-    const repeated = s.split('').sort((a,b) => a<b)
+    const repeated = s.split('').sort((a,b) => a<b? -1:1)
       .filter((a,i,arr) => a==arr[i+1] && a!==arr[i-1]);
 
     for (let i=0; i<s.length; i++){
