@@ -1,3 +1,5 @@
+// Recursive solution
+
 let reverseListHelper = (head, previous) => {
     let originalNext = null;
     if (head.next)
