@@ -1,69 +1,51 @@
 /**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-/**
- * @param {ListNode} l1
- * @param {ListNode} l2
- * @return {ListNode}
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
  */
 
-// Test Cases
-//[1,2,3] [1,2,3,4,5]
-// [1,2,3] [6,7,8,9]
-// [][]
-// [1,2][]
-// [][3,4]
+// Test cases:
+// [] 4 => [-1, -1]
+// [1,2,3,4,7,7,7,7,7,7,7,8,9,10,11,12,14]  / 7
+// [1,2,3,4,5,6,7] / 6
+// [1,2,3,4,5,6,7] / 1
 
-function ListNode(val) {
-    this.val = val;
-    this.next = null;
- }
+let binaryS = (nums, target, min=0, max=nums.length-1) => {
+    if (min>max)
+        return null
 
-var mergeTwoLists = function(l1, l2) {
-    let l3 = new ListNode(null)
-    let currentNode = new ListNode(null);
+    const midIdx = min + Math.ceil((max-min)/2)
 
-    // first node
-    if (l1 && l2){
-        if (l1.val < l2.val){
-            l3.val = l1.val;
-            l1 = l1.next;
-        } else {
-            l3.val = l2.val;
-            l2 = l2.next;
-        }
-        l3.next = currentNode;
-    } else {
-        return l1? l1: l2;
+    if (nums[midIdx] === target)
+        return midIdx
+
+    if(nums[midIdx]>target){
+        return binaryS(nums, target, min, midIdx-1);
     }
 
-    while(l1 || l2){
-        if (l1 && l2){
-            if (l1.val < l2.val){
-                currentNode.val = l1.val;
-                l1 = l1.next;
-            } else {
-                currentNode.val = l2.val;
-                l2 = l2.next;
+    return binaryS(nums, target, midIdx+1, max);
+}
+
+var searchRange = function(nums, target) {
+        const idx = binaryS(nums,target)
+
+        if (idx !== null){
+            let left = idx;
+            let right = idx;
+
+            if (right<nums.length-1){
+                while(nums[right+1] === target){
+                    right++
+                }
+            }
+            if (left>0){
+                while(nums[left-1] === target){
+                    left --
+                }
             }
 
-            currentNode.next = new ListNode(null);
-            currentNode = currentNode.next;
-        } else {
-            if (l1){
-                currentNode.val = l1.val;
-                currentNode.next = l1.next;
-            } else {
-                currentNode.val = l2.val;
-                currentNode.next = l2.next;
-            }
-            break;
+            return [left, right]
         }
-    }
 
-    return l3
+    return [-1,-1]
 };
