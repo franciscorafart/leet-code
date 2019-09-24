@@ -50,7 +50,5 @@ var binaryTreePaths = function(root) {
         }
     }
 
-    const result = paths.map(path => path.join("->"))
-
-    return result;
+    return paths.map(path => path.join("->"))
 };
