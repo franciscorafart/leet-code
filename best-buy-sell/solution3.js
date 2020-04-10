@@ -11,6 +11,7 @@
 // [3,5,2,3,1] --> 2
 // [4,11,2,1,7] --> 7
 
+// Best case O(n) - worst: O^2
 var maxProfit = function(prices) {
     if (prices.length === 0 || prices.length === 1)
         return 0
