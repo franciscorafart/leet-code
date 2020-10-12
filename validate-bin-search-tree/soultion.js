@@ -19,7 +19,7 @@
 // [10,5,15,null,null,11,20, null,12] -> True
 
 
-var isValidBST = function(root) {
+const isValidBST = (root) => {
     if (root){
         // traverse breadth first
         let queue = [{node: root, min: Number.NEGATIVE_INFINITY, max: Number.POSITIVE_INFINITY}];

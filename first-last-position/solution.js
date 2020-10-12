@@ -10,7 +10,7 @@
 // [1,2,3,4,5,6,7] / 6
 // [1,2,3,4,5,6,7] / 1
 
-let binaryS = (nums, target, min, max) => {
+const binaryS = (nums, target, min, max) => {
 
     if (min == null || max == null){
         min=0;
@@ -32,7 +32,7 @@ let binaryS = (nums, target, min, max) => {
     return binaryS(nums, target, midIdx+1, max);
 }
 
-var searchRange = function(nums, target) {
+const searchRange = (nums, target) => {
     if (Array.isArray(nums) || target.isInteger()){
         const idx = binaryS(nums,target)
 

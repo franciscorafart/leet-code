@@ -18,7 +18,7 @@
 // [1,0] -> false
 // [2,3,3,4,5,5,4,null,null,8,9,null,null,9,8] -> false
 
-var isSymmetric = function(root) {
+const isSymmetric = (root) => {
     let queue1 = [];
     let queue2 = [];
 

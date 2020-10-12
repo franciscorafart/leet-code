@@ -14,7 +14,7 @@
 // modify A
 // add addition to result array
 
-let sumEvenAfterQueries = (A, queries) => {
+const sumEvenAfterQueries = (A, queries) => {
     let addition = A.reduce((acc,n) => (n%2==0)? acc+=n: acc, 0);
     let result = []
     for (const el of queries){

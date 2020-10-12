@@ -6,7 +6,7 @@
 // -25 false
 // - 16 false
 
-let isPowerOfTwo = n => {
+const isPowerOfTwo = n => {
     if (n<=0)
         return false
 

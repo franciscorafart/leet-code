@@ -3,7 +3,8 @@
  * @param {number} target
  * @return {number}
  */
-let binaryS = (nums, target,min, max) => {
+
+const binaryS = (nums, target,min, max) => {
     if (min==null || max == null){
         min =0;
         max = nums.length-1
@@ -23,7 +24,8 @@ let binaryS = (nums, target,min, max) => {
     return binaryS(nums, target, midIdx+1, max);
 
 }
-var searchInsert = function(nums, target) {
+
+const searchInsert = (nums, target) => {
     if (nums.length>0)
         return binaryS(nums, target)
 

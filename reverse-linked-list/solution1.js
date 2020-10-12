@@ -1,11 +1,11 @@
 // Recursive solution
 
-let reverseListHelper = (head, previous) => {
+const reverseListHelper = (head, previous) => {
     let originalNext = null;
     if (head.next)
         originalNext = head.next;
 
-    head.next = previous
+    head.next = previous;
 
     if(originalNext)
         head = reverseListHelper(originalNext, head);
@@ -13,7 +13,7 @@ let reverseListHelper = (head, previous) => {
     return head;
 }
 
-let reverseList = head => {
+const reverseList = head => {
     if (head)
         return reverseListHelper(head, null);
 

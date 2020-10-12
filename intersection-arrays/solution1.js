@@ -1,7 +1,7 @@
 // O(n)-solution
-var intersect = function(nums1, nums2) {
-    let indexes = {}
-    let results = [];
+const intersect = (nums1, nums2) => {
+    const indexes = {}
+    const results = [];
 
     for (let i=0; i<nums1.length; i++){
         const num = nums1[i];

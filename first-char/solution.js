@@ -1,4 +1,4 @@
-let firstUniqChar = (s) => {
+const firstUniqChar = s => {
     const indexes = {}
 
     for (let i = 0; i<s.length; i++){
@@ -6,7 +6,7 @@ let firstUniqChar = (s) => {
         indexes[thisChar] = (indexes[thisChar] === undefined)? [i, false]:[i, true];
     }
 
-    for (let [key,value] of Object.entries(indexes)){
+    for (let [_,value] of Object.entries(indexes)){
         if (!value[1]){
             return value[0]
         }

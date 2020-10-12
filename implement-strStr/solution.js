@@ -10,7 +10,7 @@
 // "hello" "ll" => 2
 // "" "ll"  => -1
 // "hello" "" => 0
-var strStr = function(haystack, needle) {
+const strStr = (haystack, needle) => {
     if (needle.length === 0)
         return 0;
 

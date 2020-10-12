@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 
-var lemonadeChange = function(bills) {
+const lemonadeChange = bills => {
     const keyVal = [[20, 0], [10, 0], [5, 0]]
     const register = new Map(keyVal);
 

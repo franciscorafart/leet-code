@@ -4,10 +4,11 @@
  * @return {number[]}
  */
 
-var twoSum = function(numbers, target) {
+const twoSum = (numbers, target) => {
     // Two indexes i and j calculating sum. If sum larger i --> , else <-- j
     let i = 0;
     let j=numbers.length-1;
+    
     while(i<j){
         const sum = numbers[i]+numbers[j];
         if (sum === target)

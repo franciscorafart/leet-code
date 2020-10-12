@@ -1,5 +1,5 @@
 // Iteration
-let reverseList = head => {
+const reverseList = head => {
     if (head){
         let previous = null;
         let following = null;

@@ -1,4 +1,4 @@
-var deleteNode = function(node) {
+const deleteNode = node => {
     if (node.next){
         node.val = node.next.val;
         if(node.next.next){

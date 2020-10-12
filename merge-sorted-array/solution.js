@@ -13,7 +13,7 @@
 // [6,7,8,9,0] AND [] => [6,7,8,9,0]
 // [] AND [] => []
 
-let merge = function(nums1, m, nums2, n) {
+const merge = function(nums1, m, nums2, n) {
     if (n!==0){
         m=m-1;
         n=n-1;

@@ -16,13 +16,13 @@ function ListNode(val) {
 // 1->2->1 true
 // null true
 
-let nodeCopy = node => {
+const nodeCopy = node => {
    const newNode = new ListNode(node.val);
    newNode.next = node.next;
    return newNode
 }
 
-let isPalindrome = (head) => {
+const isPalindrome = (head) => {
    if (!head || head.next==null)
        return true;
 
@@ -39,6 +39,7 @@ let isPalindrome = (head) => {
 
        size++
    }
+   
    headB.next = previousNode
 
    for (let i=1; i<=size/2;i++){

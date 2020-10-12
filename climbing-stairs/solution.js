@@ -9,7 +9,7 @@
 // 0 => 0
 
 // Traverse and look
-var climbStairs = function(n) {
+const climbStairs = n => {
     if (n<0)
         return 0
 

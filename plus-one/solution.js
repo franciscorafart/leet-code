@@ -1,5 +1,6 @@
-let plusOne = digits => {
+const plusOne = digits => {
     let extra = 1;
+    
     for (let i=digits.length-1; i>=0; i--){
         let add = digits[i]+extra;
 

@@ -1,6 +1,6 @@
 // Addition by negatives solution
 
-let singleNumber = nums => {
+const singleNumber = nums => {
     let result = 0;
     nums.sort((a,b) => a-b);
     for (let i=0; i<nums.length; i++){

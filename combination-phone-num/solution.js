@@ -13,11 +13,11 @@ const map = {
     '9': ['w', 'x', 'y', 'z']
 }
 
-let letterCombinations = function(digits) {
+const letterCombinations = digits => {
     if (digits.length==0)
         return []
 
-    let digitsArr = digits.split('').map(d => map[d]);
+    const digitsArr = digits.split('').map(d => map[d]);
 
     let first = digitsArr.shift(0,1);
     let second = null;

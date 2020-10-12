@@ -1,4 +1,4 @@
-let removeHelper = (head, n, count) => {
+const removeHelper = (head, n, count) => {
 
     if (n==count){ // removes first or only element
         head = head.next
@@ -15,7 +15,7 @@ let removeHelper = (head, n, count) => {
     return head;
 }
 
-let removeNthFromEnd = function(head, n) {
+const removeNthFromEnd = (head, n) => {
     let count = 1;
     let thisHead = head;
     while(thisHead.next != null){

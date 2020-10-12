@@ -19,7 +19,7 @@
 // head = [1], pos=-1 => true
 // head = [], pos = -1 => false
 
-var hasCycle = function(head) {
+const hasCycle = head => {
     let visited = false;
     if (head){
         const visitedMemo = new Map();

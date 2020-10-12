@@ -14,7 +14,7 @@
 // [] 0 --> 0
 // [] 23 -> -1
 
-var coinChange = function(coins, amount) {
+const coinChange = (coins, amount) => {
     if (amount === 0)
         return 0
 

@@ -18,7 +18,7 @@
 // null true
 
 // Solution uses deep copy of object
-var isPalindrome = function(head) {
+const isPalindrome = head => {
     if (!head || head.next==null)
         return true;
 

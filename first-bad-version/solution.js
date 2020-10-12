@@ -34,12 +34,12 @@ const solutionHelper = (min, max, isBadVersion) => {
     }
 }
 
-var solution = function(isBadVersion) {
+const solution = isBadVersion => {
     /**
      * @param {integer} n Total versions
      * @return {integer} The first bad version
      */
-    return function(n) {
+    return n => {
         if (n<2){
             return isBadVersion(n)? n:null;
         }

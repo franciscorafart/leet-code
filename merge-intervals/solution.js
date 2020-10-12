@@ -13,7 +13,7 @@
 // [[10, 99],[5, 100]] => [[5, 100]]
 // [[2,3],[4,5],[6,7],[8,9],[1,10]] => [[1,10]]
 
-let mergeHelper = (a,b) => {
+const mergeHelper = (a,b) => {
     if((b[0]>=a[0] && b[0]<=a[1]) || (b[1]>=a[0] && b[1]<=a[1])){
         const min = Math.min(a[0], b[0]);
         const max = Math.max(a[1], b[1]);
@@ -22,7 +22,8 @@ let mergeHelper = (a,b) => {
 
     return null
 }
-var merge = function(intervals) {
+
+const merge = function(intervals) {
     if (intervals.length<2)
         return intervals
 

@@ -1,7 +1,7 @@
 // Recursive solution
 
-let singleNumber = nums => {
-    let j=nums.length-1;
+const singleNumber = nums => {
+    let j = nums.length-1;
     while(j>0){
         if (nums[0]==nums[j]){
             nums.splice(0,1)

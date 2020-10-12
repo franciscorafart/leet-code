@@ -41,7 +41,7 @@ const traverseDepth = (node, path, paths) => {
 };
 
 var binaryTreePaths = function(root) {
-    let paths = [];
+    const paths = [];
     if (root){
         if (isLeaf(root)){
             paths.push([root.val])

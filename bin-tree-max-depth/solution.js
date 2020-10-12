@@ -15,7 +15,7 @@
 // [1,23,34,53,76,23,15,56,7] => 4
 // [1,23,34,null,76,23,15,null,7, 12,45,23,12,54] => 5
 
-var maxDepth = function(root) {
+const maxDepth = root => {
     // using a queue push and take elements from top
     // keep track of elements pushed per level
     let currentLevel = 0;

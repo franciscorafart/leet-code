@@ -1,4 +1,4 @@
-let firstUniqChar = (s) => {
+const firstUniqChar = s => {
     const repeated = s.split('').sort((a,b) => a<b? -1:1)
       .filter((a,i,arr) => a==arr[i+1] && a!==arr[i-1]);
 

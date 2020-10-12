@@ -47,6 +47,7 @@ const longestPalindrome = s => {
             palindromes.push(buildPalindrome(sArr, i, true));
         }
     }
+    
     palindromes.sort((a, b) => b.length-a.length);
 
     return palindromes[0];

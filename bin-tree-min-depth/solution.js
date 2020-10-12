@@ -16,13 +16,13 @@
 // [0] -> 1
 // [3,9,20,null,11,15,7,6,9] -> 3
 
-let isLeaf = node => node && !node.right && !node.left
+const isLeaf = node => node && !node.right && !node.left
 
-var minDepth = function(root) {
+const minDepth = root => {
     if(!root)
         return 0;
 
-    let queue = [[root, 0]];
+    const queue = [[root, 0]];
     let depth = 0;
 
     while (queue.length>0){

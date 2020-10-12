@@ -11,7 +11,7 @@
 // [3,5,2,3,1] --> 2
 
 // Recursive Solution
-var maxProfit = function(prices) {
+const maxProfit = prices => {
     if (prices.length === 0 || prices.length === 1)
         return 0
 

@@ -4,7 +4,8 @@
 
 const findRepeatedDnaSequences = s => {
     const keyed_sequences = {};
-    const sArr = s.split('')
+    const sArr = s.split('');
+
     for (i=0; i+10<=sArr.length;i++){
       const sequence = sArr.slice(i,i+10).join('');
 

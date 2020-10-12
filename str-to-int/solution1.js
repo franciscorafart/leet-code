@@ -41,7 +41,7 @@ const validPortion = sArray => {
     return filtered
 }
 
-let myAtoi = str => {
+const myAtoi = str => {
     const cleanStr = validPortion(str.trim().split(''));
 
     if (cleanStr.length<1)

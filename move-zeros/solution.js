@@ -9,7 +9,7 @@
 // [] => []
 // [0,0,3,2,4,0]
 
-var moveZeroes = function(nums) {
+const moveZeroes = nums => {
     if (nums.length<=1)
         return
 

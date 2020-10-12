@@ -12,7 +12,7 @@ const boxNum = (x,y) => {
     return (vertical*3) + horizontal;
 }
 
-var isValidSudoku = function(board) {
+const isValidSudoku = (board) => {
     const box3x3 = {}
     const columns = {}
 

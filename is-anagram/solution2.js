@@ -1,6 +1,7 @@
-let isAnagram = (s,t) => {
+const isAnagram = (s,t) => {
     if (s.length != t.length)
         return false
+
     const indexes = {}
 
     for (let i=0; i<s.length; i++){
